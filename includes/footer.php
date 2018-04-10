@@ -27,12 +27,5 @@
       <a class = "refer_a" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
          cloudflare
       </a>
-      <a class = "refer_a"> | </a>
-      <a class = "refer_a">
-        Restaurant info are from:
-      </a>
-      <a class = "refer_a" href="https://www.yelp.com/">
-         yelp
-      </a>
   </div>
 </footer>

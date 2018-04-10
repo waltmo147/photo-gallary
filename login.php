@@ -5,7 +5,7 @@ include("includes/image.php");
 
 
 <!DOCTYPE html>
-<html>
+<html lang = "en">
 
 
 <head>
@@ -24,9 +24,9 @@ include("includes/image.php");
   ?>
 
   <div id="content">
-    <div class = "super_container">
+    <div class = "super_container" id="edit-super-container">
 
-        <div class = "main">
+        <div class = "main" id="edit-container">
           <form action="login.php" method="post">
             <h1>Log in</h1>
 
@@ -53,7 +53,7 @@ include("includes/image.php");
 
         <!-- <div class = "search">
         </div> -->
-
+      </div>
   </div>
   <?php include("includes/footer.php");?>
 </body>

@@ -1,6 +1,18 @@
 <?php
 include('includes/init.php');
 include('includes/image.php');
+$search = NULL;
+
+if (isset($_GET["search"])) {
+  $search = filter_input(INPUT_GET, 'search', FILTER_SANITIZE_STRING);
+  $search = trim($search);
+  if ($search) {
+    $sql = 'SELECT photos.id, photos.file_ext FROM photos INNER JOIN matches ON photos.id = matches.photo_id INNER JOIN tags ON tags.id = matches.tag_id WHERE tags.tag = :tag';
+    $params = array(':tag' => $search);
+    $images = exec_sql_query($db, $sql, $params)->fetchAll();
+  }
+}
+
 ?>
 
 
@@ -27,14 +39,19 @@ include('includes/image.php');
 
         <div class = 'main'>
           <div class = 'top-shelf-grey'>
-            <form id='searchForm' action='gallery.php' method='get'>
-              <input class='search' type='text' placeholder='Search..' name='search'>
-              <button type='submit'><i class='fa fa-search'></i></button>
-            </form>
+            <h1>
+              <?php
+              if ($images) {
+                echo htmlspecialchars($search);
+              }
+              else {
+                echo "No result for ".htmlspecialchars($search);
+              }
+              ?>
+            </h1>
           </div>
 
           <?php
-          $images = exec_sql_query($db, 'SELECT * FROM photos', NULL)->fetchAll();
           show_image($images);
           ?>
 

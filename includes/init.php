@@ -121,6 +121,7 @@ function log_in($username, $password) {
           setcookie("session", $session, time()+3600);  /* expire in 1 hour */
 
           record_message("Logged in as $username.");
+          record_message("Wait 3s to refresh.");
           return $current_user;
         } else {
           record_message("Log in failed.");
@@ -132,7 +133,6 @@ function log_in($username, $password) {
       record_message("Invalid username or password.");
     }
   } else {
-
     record_message("No username or password given.");
   }
   return NULL;
@@ -164,15 +164,16 @@ if (isset($_POST['login'])) {
   $username = trim($username);
   $password = filter_input(INPUT_POST, 'password', FILTER_SANITIZE_STRING);
   $current_user = log_in($username, $password);
-  header("Refresh:0; url=login.php");
+  header("Refresh:3; url=login.php");
 }
 
 if (isset($_POST['logout'])) {
   log_out();
   if (!$current_user) {
     record_message("You've been successfully logged out.");
+    record_message("Wait 3s to refresh.");
   }
-  header("Refresh:0; url=login.php");
+  header("Refresh:3; url=login.php");
 }
 
 // check if logged in

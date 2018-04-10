@@ -2,6 +2,7 @@
     margin-top: 0;
     background-color: #39373a;
 } */
+
 html, body
 {
   height: auto;
@@ -45,6 +46,76 @@ header #title {
   min-width: 1100px;
 }
 
+#edit-super-container {
+  width: 400px;
+  min-height: 300px;
+  text-align: center;
+}
+
+#edit-container {
+  width: 400px;
+  min-height: 300px;
+  float: none;
+}
+
+#edit1-super-container {
+  width: auto;
+  min-width: 400px;
+  min-height: 300px;
+  text-align: center;
+}
+
+#edit1-container {
+  min-width: 400px;
+  min-height: 300px;
+  float: none;
+}
+
+#edit1-container img {
+  max-width: 850px;
+  padding: 20px;
+  padding-bottom: 0;
+}
+
+#edit1-container ul {
+  margin-top: 0;
+  text-align: center;
+}
+
+#edit1-container li {
+
+  margin: 10px;
+  overflow: hidden;
+}
+
+#edit1-container a {
+  display: inline-block;
+  font-size: 15px;
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, serif;
+  color: black;
+  margin: 5px 10px;
+  padding: 3px 8px;
+  background-color: #ddd;
+  border-radius: 15px;
+}
+
+#edit1-container button[type=submit] {
+  font-size: 14px;
+  margin: 0 10px;
+  border-radius: 3px;
+}
+
+.side a {
+  float: left;
+  font-size: 15px;
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, serif;
+  color: black;
+  margin: 5px 5px;
+  padding: 3px 8px;
+  background-color: #ddd;
+  border-radius: 15px;
+}
+
 a {
   font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, serif;
   margin: 20px 0;
@@ -56,9 +127,9 @@ a {
 
 div.login {
   width: 300px;
-  height: 500px;
+  min-height: 150px;
   padding: 50px;
-  padding-top: 0;
+  padding-top: 0px;
   margin: auto;
 }
 
@@ -69,7 +140,7 @@ ul {
 
 #menu ul.right {
   float: right;
-  width: 40%;
+  width: 30%;
   list-style-type: none;
   padding-left: 0;
   color: white;
@@ -87,13 +158,28 @@ ul {
 
 #menu ul.left {
   float: left;
-  width: 50%;
+  width: 35%;
   list-style-type: none;
   padding-left: 0;
   color: white;
   font-size: 20px;
   line-height: 1.3125em;
   text-align: left;
+  margin: 20px;
+  padding: 0px;
+  margin-bottom: 0px;
+}
+
+#menu .center {
+  float:left;
+  text-align: center;
+  width: 20%;
+  list-style-type: none;
+  padding-left: 0;
+  color: white;
+  font-size: 40px;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  line-height: 1.3125em;
   margin: 20px;
   padding: 0px;
   margin-bottom: 0px;
@@ -117,7 +203,6 @@ ul {
   color: white;
   transition: color 0s;
   cursor: pointer;
-
 }
 
 #add-image {
@@ -147,6 +232,8 @@ ul {
   transition: color 0s;
   cursor: pointer;
 }
+
+
 
 #index {
   min-height: 960px;
@@ -239,7 +326,31 @@ input.price {
     margin: 0 auto;
 }
 
-button {
+
+input[type=file] {
+  font-size: 15px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#uploadFile {
+  padding: 30px;
+}
+
+#uploadFile button {
+  float: none;
+  font-size: 20px;
+}
+
+#uploadFile ul {
+  text-align: left;
+}
+
+#uploadFile li {
+  margin: 20px;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+#searchForm button{
   float: left;
   background: #ddd;
   font-size: 45px;
@@ -260,9 +371,7 @@ button {
   border: none;
 }
 
-
-
-button.filter {
+#searchForm button.filter {
   margin: 10px;
   width: 70px;
   height: 35px;
@@ -302,9 +411,10 @@ input.insert {
   border: 1px solid #ddd;
   border-radius: 4px;
   padding: 5px;
-  margin: 20px;
+  margin: 10px;
   width: 280px;
-  height: auto;
+  height: 280px;
+  overflow: hidden;
   float: left;
 }
 
@@ -319,7 +429,7 @@ input.insert {
 }
 
 div.super_container {
-  width: 1080px;
+  width: 1180px;
   min-height: 960px;
   padding: 15px;
   height: 100%;
@@ -331,12 +441,23 @@ div.super_container {
 }
 
 div.main {
-  width: 100%;
+  width: 900px;
   margin: 30px 0;
   background-color: white;
   height: 100%;
   float: left;
   min-height: 960px;
+}
+
+div.side {
+  width: 220px;
+  margin: 30px 0;
+  min-height: 150px;
+  padding: 15px 15px;
+  padding-bottom: 5px;
+  background-color: white;
+  float: right;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 div.search {
@@ -449,11 +570,10 @@ h1 {
   margin: 0;
   padding: 10px;
   padding-top: 0;
-  color: rgb(199, 94, 71);
   /* font: 400 100px/1.3 'Oleo Script', Helvetica, sans-serif; */
   font-family: "Comic Sans MS", cursive, sans-serif;
   font-weight: bold;
-  font-size: 50px;
+  font-size: 40px;
 }
 
 h2 {
@@ -509,7 +629,7 @@ h3.page_header::before, h3.page_header::after {
   position: absolute;
   top: 50%;
   width: 30%;
-  border-bottom: 5px solid rgba(0,0,0,0.25);
+  border-bottom: 5px solid rgba(255,255,255,0.75);
   content: "";
 }
 
@@ -526,7 +646,7 @@ h3.page_footer::before, h3.page_footer::after {
   top: 50%;
   /* display: block; */
   width: 30%;
-  border-bottom: 5px solid rgba(0,0,0,0.25);
+  border-bottom: 5px solid rgba(255,255,255,0.75);
   content: "";
 }
 
@@ -539,6 +659,7 @@ i.icons {
 
   /* position: relative; */
 }
+
 
 footer {
   background-color: black;
