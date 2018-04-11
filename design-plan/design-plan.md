@@ -17,16 +17,20 @@ I've selected my persona because:
 ### Sketches
 
 [Insert your sketches here.]
-![sketch1](/images/sketch1.png)
-![sketch2](/images/sketch2.png)
-![sketch3](/images/sketch3.png)
+![index](/images/sketch6.png)
+![gallery](/images/sketch3.png)
+![add](/images/sketch4.png)
+![login](/images/sketch5.png)
+![edit](/images/sketch7.png)
 
 ### Wireframes
 
 [Insert your wireframes here.]
-![wireframe1](/images/wireframe1.png)
-![wireframe2](/images/wireframe2.png)
-![wireframe3](/images/wireframe3.png)
+![index](/images/wireframe6.png)
+![gallery](/images/wireframe3.png)
+![add](/images/wireframe4.png)
+![login](/images/wireframe5.png)
+![edit](/images/wireframe7.png)
 
 [Explain why your design would be effective for your persona. 1-3 sentences.]
 
